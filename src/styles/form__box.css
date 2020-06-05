@@ -1,0 +1,40 @@
+body {
+    background-color: gold;
+}
+
+h1 {
+    color: blue;
+}
+
+.form__box {
+    display: flex;
+    flex-direction: column;
+    line-height: 30px ;
+    color: crimson;
+    width: 40%;
+    font-size: 20px;
+    background-color: lightgray;
+    border:black 5px double;
+}
+
+.input__field {
+    font-size: 20px;
+    color: blue;
+}
+
+#button {
+    background-color: crimson;
+    width: 135px;
+    height: 40px;
+    display: flex;
+    font-size: 12px;
+    border: dodgerblue 2px solid;
+    border-radius: 10px;
+    justify-content: center;
+    margin: 8px 0px 4px 0px;
+}
+
+#button:hover {
+    color: silver;
+    box-shadow: 0 5px 15px rgba(145, 92, 182, .4);
+}
