@@ -9,7 +9,6 @@ h1 {
 .form__box {
     display: flex;
     flex-direction: column;
-    line-height: 30px ;
     color: crimson;
     width: 40%;
     font-size: 20px;
@@ -18,23 +17,40 @@ h1 {
 }
 
 .input__field {
+    display: flex;
+    flex-direction: column;
     font-size: 20px;
     color: blue;
+    line-height: 20px;
+}
+
+#journalDate {
+    display: flex;
+    flex-direction: row;
+}
+
+#conceptsCovered {
+    width: 75%;
+}
+
+#journalEntry {
+    width: 75%;
 }
 
 #button {
     background-color: crimson;
-    width: 135px;
-    height: 40px;
+    width: 100px;
+    height: 30px;
     display: flex;
     font-size: 12px;
-    border: dodgerblue 2px solid;
-    border-radius: 10px;
+    border: red 1px solid;
+    border-radius: 5px;
     justify-content: center;
-    margin: 8px 0px 4px 0px;
+    margin: 10px 0px 0px 0px;
 }
 
 #button:hover {
-    color: silver;
-    box-shadow: 0 5px 15px rgba(145, 92, 182, .4);
+    color: gold;
+    box-shadow: 0 0 3px 3px red;
 }
+
