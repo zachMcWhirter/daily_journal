@@ -1,9 +1,13 @@
 body {
     background-color: gold;
+    background-image: url("https://www.visittheusa.co.uk/sites/default/files/styles/hero_m_1300x700/public/images/hero_media_image/2016-10/HERO%201_Nashville_TN_shutterstock_208620637_Web72DPI.jpg?itok=FBV9aqp0");
+    background-size: cover;
+    
 }
 
 h1 {
     color: blue;
+    text-shadow: 0 0 18px black;
 }
 
 .form__box {
@@ -13,6 +17,7 @@ h1 {
     width: 40%;
     font-size: 20px;
     background-color: lightgray;
+    opacity: 95%;
     border:black 5px double;
 }
 
