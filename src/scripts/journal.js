@@ -10,8 +10,9 @@ const journalEntryObject = {
     }
 
 const arrayOfJournalEntryObjects =[]
-for (let journalEntry of arrayOfJournalEntryObjects) {
+for (const journalEntry of arrayOfJournalEntryObjects) {
     arrayOfJournalEntryObjects.push(journalEntry)
+
     console.log(arrayOfJournalEntryObjects)
-    
+    console.log(journalEntry) 
 }
