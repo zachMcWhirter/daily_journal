@@ -38,8 +38,8 @@
 // console.log(arrayOfJournalEntryObjects)
 // should log an array of objects to the console
 
-******************************
-Daily Journal - Part 2:
+// ******************************
+// Daily Journal - Part 2:
 
 const arrayOfJournalEntryObjects =[
     {
@@ -80,9 +80,35 @@ const arrayOfJournalEntryObjects =[
 
     Arguments: journalEntry (object)
 */
-const makeJournalEntryComponent = (journalEntry) => {
+const makeJournalEntryComponent = (journalEntryObject) => {
     // Create your own HTML structure for a journal entry
-    return `
-
-    `
+    const journalHTMLRepresentation = `<section class=>
+    ${currentJournalEntry.journalDate} <br>
+    ${currentJournalEntry.conceptsCovered} <br>
+    ${currentJournalEntry.journalEntry}<br>
+    ${currentJournalEntry.mood} <br>
+    </section>`
+    return journalHTMLRepresentation
 }
+
+/*
+    Purpose: To render all journal entries to the DOM
+
+    Arguments: entries (array of objects)
+*/
+const journalEntryList = (entries) => {
+    // Iterate the collection of taco objects
+    for (const journalEntry of journalEntries) {
+
+        // Convert the current object to its HTML representation
+        const journalHTML = journalEntryConverter(journalEntry)
+
+        // Find the <article> element in index.html
+        const journalEntryArticleElement = document.querySelector(".entryLog")
+
+        // Put the taco HTML representation inside the <article> element
+        journalEntryArticleElement.innerHTML += journalHTML
+    }
+}
+
+// Invoke the render function
