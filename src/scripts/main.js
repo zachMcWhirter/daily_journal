@@ -1,2 +1,2 @@
 // Invoke the render function
-journalEntryList();
+// journalEntryList();

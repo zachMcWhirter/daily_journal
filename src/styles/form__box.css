@@ -2,12 +2,12 @@ body {
     background-color: gold;
     background-image: url("https://www.visittheusa.co.uk/sites/default/files/styles/hero_m_1300x700/public/images/hero_media_image/2016-10/HERO%201_Nashville_TN_shutterstock_208620637_Web72DPI.jpg?itok=FBV9aqp0");
     background-size: cover;
-    
 }
 
 h1 {
     color: gold;
     text-shadow: 0 0 18px black;
+    margin-left: 20px;
 }
 
 .form__box {
@@ -19,6 +19,7 @@ h1 {
     background-color: black;
     opacity: 85%;
     border:black 5px double;
+    margin: 15px;
 }
 
 .input__field {
@@ -60,3 +61,15 @@ h1 {
     box-shadow: 0 0 3px 3px gold;
 }
 
+.journalEntryCard {
+    background-color: silver;
+    opacity: 75%;
+    padding: 10px;
+    margin: 15px;
+    border: black 3px solid;
+    width: 50%;
+}
+
+.singleEntryDate {
+    color: firebrick;
+}

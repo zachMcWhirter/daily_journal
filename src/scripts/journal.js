@@ -80,14 +80,16 @@ const arrayOfJournalEntryObjects =[
 
     Arguments: journalEntry (object)
 */
-const makeJournalEntryComponent = (journalEntryObject) => {
+const journalEntryConverter = (journalEntryObject) => {
     // Create your own HTML structure for a journal entry
-    const journalHTMLRepresentation = `<section class=>
-    ${currentJournalEntry.journalDate} <br>
-    ${currentJournalEntry.conceptsCovered} <br>
-    ${currentJournalEntry.journalEntry}<br>
-    ${currentJournalEntry.mood} <br>
+    const journalHTMLRepresentation = `<section class="journalEntryCard">
+
+        <div class="singleEntryDate">${journalEntryObject.dateOfEntry}</div> <br>
+        <div>${journalEntryObject.conceptsCovered}</div> <br>
+        <div>${journalEntryObject.journalEntry}</div> <br>
+        <div>${journalEntryObject.moodForTheDay}</div> <br>
     </section>`
+    
     return journalHTMLRepresentation
 }
 
@@ -96,7 +98,7 @@ const makeJournalEntryComponent = (journalEntryObject) => {
 
     Arguments: entries (array of objects)
 */
-const journalEntryList = (entries) => {
+const journalEntryList = (journalEntries) => {
     // Iterate the collection of taco objects
     for (const journalEntry of journalEntries) {
 
@@ -108,7 +110,9 @@ const journalEntryList = (entries) => {
 
         // Put the taco HTML representation inside the <article> element
         journalEntryArticleElement.innerHTML += journalHTML
+        // console.log("it works!")
     }
 }
 
 // Invoke the render function
+journalEntryList(arrayOfJournalEntryObjects);
