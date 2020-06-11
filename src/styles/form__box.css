@@ -4,22 +4,45 @@ body {
     background-size: cover;
 }
 
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+}
+
 h1 {
     color: gold;
-    text-shadow: 0 0 18px black;
+    text-shadow: 0 0 33px black;
     margin-left: 20px;
+}
+
+.under__banner {
+    display: flex;
+    flex-direction: row;
+}
+
+.under__bannerLeft {
+    display: flex;
+    flex-direction: row;
+}
+
+.under__bannerRight {
+    display: flex;
+    flex-direction: row;
 }
 
 .form__box {
     display: flex;
     flex-direction: column;
     color: red;
-    width: 40%;
     font-size: 20px;
     background-color: black;
     opacity: 85%;
     border:black 5px double;
-    margin: 15px;
+    margin: 15px 25px 0 25px;
+    width: 500px;
+    height: 313px;
 }
 
 .input__field {
@@ -37,11 +60,11 @@ h1 {
 }
 
 #conceptsCovered {
-    width: 75%;
+    width: 100%;
 }
 
 #journalEntry {
-    width: 75%;
+    width: 100%;
 }
 
 #button {
@@ -62,14 +85,16 @@ h1 {
 }
 
 .journalEntryCard {
-    background-color: silver;
+    color: gold;
+    background: rgba(0, 0, 0, .9);
     opacity: 75%;
     padding: 10px;
     margin: 15px;
     border: black 3px solid;
-    width: 50%;
+    width: 700px;
 }
 
 .singleEntryDate {
     color: firebrick;
+    font-weight: bold;
 }
