@@ -35,11 +35,9 @@ const journalEntry5 = {
     moodForTheDay: "Really Good"
 }
 
-
-// **this variable must be a VAR so you can use CONST in the next step**
 var journalEntries = [];
 journalEntries.push(journalEntry1, journalEntry2, journalEntry3, journalEntry4, journalEntry5);
-console.log("testing:journalEntries", journalEntries);
+// console.log("testing:journalEntries", journalEntries);
 
 // *******************************
 // Daily Journal - Part 3 Instructions:
@@ -48,53 +46,56 @@ console.log("testing:journalEntries", journalEntries);
 
 // *STEP 1*
 
-// const journalEntries = [
-//     {
-//         dateOfEntry: "06/01/20",
-//         conceptsCovered: "design, flexbox, components, objects, properties",
-//         journalEntry: "Martin's Aquarium Day 1",
-//         moodForTheDay: "Pretty Good"
-//     },
-//     {
-//         dateOfEntry: "06/02/20",
-//         conceptsCovered: "functions, string templates, iteration",
-//         journalEntry: "Martin's Aquarium Day 2",
-//         moodForTheDay: "Fantastic!"
-//     },
-//     {
-//         dateOfEntry: "06/03/20",
-//         conceptsCovered: "functions, filtering, modulo, debugger",
-//         journalEntry: "Martin's Aquarium Day 3",
-//         moodForTheDay: "Hnaging In There"
-//     },
-//     {
-//         dateOfEntry: "06/04/20",
-//         conceptsCovered: "JSON, json-server, fetch, functions",
-//         journalEntry: "Martin's Aquarium Day 4",
-//         moodForTheDay: "Got Some Work To Do"
-//     },
-//     {
-//         dateOfEntry: "06/05/20",
-//         conceptsCovered: "browser events, functions, filtering, DOM",
-//         journalEntry: "Martin's Aquarium Day 5",
-//         moodForTheDay: "Really Good"
-//     }
-// ]
+const journalEntryData = [
+    {
+        dateOfEntry: "06/01/20",
+        conceptsCovered: "design, flexbox, components, objects, properties",
+        journalEntry: "Martin's Aquarium Day 1",
+        moodForTheDay: "Pretty Good"
+    },
+    {
+        dateOfEntry: "06/02/20",
+        conceptsCovered: "functions, string templates, iteration",
+        journalEntry: "Martin's Aquarium Day 2",
+        moodForTheDay: "Fantastic!"
+    },
+    {
+        dateOfEntry: "06/03/20",
+        conceptsCovered: "functions, filtering, modulo, debugger",
+        journalEntry: "Martin's Aquarium Day 3",
+        moodForTheDay: "Hnaging In There"
+    },
+    {
+        dateOfEntry: "06/04/20",
+        conceptsCovered: "JSON, json-server, fetch, functions",
+        journalEntry: "Martin's Aquarium Day 4",
+        moodForTheDay: "Got Some Work To Do"
+    },
+    {
+        dateOfEntry: "06/05/20",
+        conceptsCovered: "browser events, functions, filtering, DOM",
+        journalEntry: "Martin's Aquarium Day 5",
+        moodForTheDay: "Really Good"
+    }
+]
+// *******************************
+// Daily Journal - Part 3 Instructions: STEP 2 
+// (step 1 is on the journalData.js module)
 
-// // ***Now write the CONVERTER FUNCTION that builds a HTML string template, and then return the HTMLRepresentation ***
+// ***Now write the CONVERTER FUNCTION that builds a HTML string template, and then return the HTMLRepresentation ***
 
-// journalEntryConverter = () => {
-//     const journalEntryHTMLRepresentation = `<section class="journalEntryCard">
+journalEntryConverter = (journalEntryObject) => {
+    const journalEntryHTMLRepresentation = `<section class="journalEntryCard">
 
-//     <div class="singleEntryDate">${journalEntryObject.dateOfEntry}</div> <br>
-//     <div>${journalEntryObject.conceptsCovered}</div> <br>
-//     <div>${journalEntryObject.journalEntry}</div> <br>
-//     <div>${journalEntryObject.moodForTheDay}</div> <br>
-// </section>`
-// }
-// console.log(journalEntryHTMLRepresentation);
-// return journalEntryHTMLRepresentation;
+    <div class="singleEntryDate">${journalEntryObject.dateOfEntry}</div> <br>
+    <div>${journalEntryObject.conceptsCovered}</div> <br>
+    <div>${journalEntryObject.journalEntry}</div> <br>
+    <div>${journalEntryObject.moodForTheDay}</div> <br>
+</section>`
 
+console.log("testing2", journalEntryHTMLRepresentation);
+return journalEntryHTMLRepresentation;
+}
 
 // **Render Journal Entries to the DOM**
 
