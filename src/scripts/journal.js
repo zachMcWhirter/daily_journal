@@ -35,7 +35,9 @@ const journalEntry5 = {
     moodForTheDay: "Really Good"
 }
 
-const journalEntries = [];
+
+// **this variable must be a VAR so you can use CONST in the next step**
+var journalEntries = [];
 journalEntries.push(journalEntry1, journalEntry2, journalEntry3, journalEntry4, journalEntry5);
 console.log("testing:journalEntries", journalEntries);
 
@@ -44,99 +46,9 @@ console.log("testing:journalEntries", journalEntries);
 
 //  *Open journal.js and place your journal entry objects inside the journal entries array. Note that you no longer need the variable names for each object. They are now simply elements in the journalEntries array.
 
+// *STEP 1*
 
-const journalEntries = [
-    {
-        dateOfEntry: "06/01/20",
-        conceptsCovered: "design, flexbox, components, objects, properties",
-        journalEntry: "Martin's Aquarium Day 1",
-        moodForTheDay: "Pretty Good"
-    },
-    {
-        dateOfEntry: "06/02/20",
-        conceptsCovered: "functions, string templates, iteration",
-        journalEntry: "Martin's Aquarium Day 2",
-        moodForTheDay: "Fantastic!"
-    },
-    {
-        dateOfEntry: "06/03/20",
-        conceptsCovered: "functions, filtering, modulo, debugger",
-        journalEntry: "Martin's Aquarium Day 3",
-        moodForTheDay: "Hnaging In There"
-    },
-    {
-        dateOfEntry: "06/04/20",
-        conceptsCovered: "JSON, json-server, fetch, functions",
-        journalEntry: "Martin's Aquarium Day 4",
-        moodForTheDay: "Got Some Work To Do"
-    },
-    {
-        dateOfEntry: "06/05/20",
-        conceptsCovered: "browser events, functions, filtering, DOM",
-        journalEntry: "Martin's Aquarium Day 5",
-        moodForTheDay: "Really Good"
-    }
-]
-
-//   *The last step in this chapter is to take your raw data structures, and create HTML representations of them so they can be added to the DOM.
-
-// **Journal Entry Component Function**
-// You've worked on exercises in which you wrote functions that returned HTML components. Now write a function that builds a journal entry HTML string template.
-
-// **Render Journal Entries to the DOM**
-
-// Create a new element in your index.html file that will be the container for all of your journal entries. Place it beneath the form component.
-
-// src/index.html
-// ________________________________
-// <article class="entryLog">
-
-// </article>
-// _________________________________
-
-// *Now write a function whose reponsibility is to iterate your array of journal entries and add them to the DOM.
-
-// src/scripts/journal.js
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// ******************************
-// Daily Journal - Part 3:
-
-// const arrayOfJournalEntryObjects =[
+// const journalEntries = [
 //     {
 //         dateOfEntry: "06/01/20",
 //         conceptsCovered: "design, flexbox, components, objects, properties",
@@ -168,6 +80,52 @@ const journalEntries = [
 //         moodForTheDay: "Really Good"
 //     }
 // ]
+
+// // ***Now write the CONVERTER FUNCTION that builds a HTML string template, and then return the HTMLRepresentation ***
+
+// journalEntryConverter = () => {
+//     const journalEntryHTMLRepresentation = `<section class="journalEntryCard">
+
+//     <div class="singleEntryDate">${journalEntryObject.dateOfEntry}</div> <br>
+//     <div>${journalEntryObject.conceptsCovered}</div> <br>
+//     <div>${journalEntryObject.journalEntry}</div> <br>
+//     <div>${journalEntryObject.moodForTheDay}</div> <br>
+// </section>`
+// }
+// console.log(journalEntryHTMLRepresentation);
+// return journalEntryHTMLRepresentation;
+
+
+// **Render Journal Entries to the DOM**
+
+// Create a new element in your index.html file that will be the container for all of your journal entries. Place it beneath the form component.
+
+// src/index.html
+// ________________________________
+// <article class="entryLog">
+
+// </article>
+// _________________________________
+
+// *Now write a function whose reponsibility is to iterate your array of journal entries and add them to the DOM.
+
+// src/scripts/journal.js
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const arrayOfJournalEntryObjects =[{k:v}]
 
 /*
     Purpose: To create, and return, a string template that
