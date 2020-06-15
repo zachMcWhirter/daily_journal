@@ -3,11 +3,14 @@
 
 // this code was copied from journalList.js
 
+// brought over the variable renderToDom. (from entryList.js) and added it to line 11. It has to be used with dot notation in conjunction with the converter function.
 
-const journalEntryList = (journalEntryData) => {
-    for(const journalEntry of journalEntryData) {
-        const journalHTML = journalEntryConverter(journalEntry)
-        const journalEntryArticleElement = document.querySelector(".entryLog")
-        journalEntryArticleElement.innerHTML += journalHTML
-    }
+const journalEntryComponent = {
+    journalEntryList() {
+        for(const journalEntry of journalEntryData) {   
+                const journalHTML = renderToDom.journalEntryConverter(journalEntry)
+                const journalEntryArticleElement = document.querySelector(".entryLog")
+                journalEntryArticleElement.innerHTML += journalHTML
+            }
+        }
 }

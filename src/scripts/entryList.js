@@ -3,7 +3,8 @@
 
 // this code was copied from journal.js
 
-journalEntryConverter = (journalEntryObject) => {
+const renderToDom = {
+journalEntryConverter  (journalEntryObject) {
     const journalEntryHTMLRepresentation = `<section class="journalEntryCard">
 
     <div class="singleEntryDate"><font color="white"; font-weight:bold;>Date:</font> ${journalEntryObject.dateOfEntry}</div> <br>
@@ -13,4 +14,5 @@ journalEntryConverter = (journalEntryObject) => {
 </section>`
 
 return journalEntryHTMLRepresentation
+    }
 }

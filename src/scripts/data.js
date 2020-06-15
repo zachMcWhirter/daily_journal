@@ -1,19 +1,17 @@
 // *************************
 // Daily Journal Part 5
 
-// this code was copied from journalData.js 
+// Consider this file an independent, helper module now. It should not directly execute any logic for the application.
+let journalEntryData = [];
 
-let journalEntryData = []
-
-const getJournalEntryData = () => {
-    return fetch("http://localhost:3000/entries").then(
-            (httpResponse) => {
-                return httpResponse.json()
+const journalAPI = {
+    getJournalEntries () {
+        return fetch("http://localhost:3000/entries")
+            .then(response => response.json()).then(
+                (arrayOfJournalEntries) =>
+                    journalEntryData = arrayOfJournalEntries
+                
+            )
         }
-    )
-        .then(
-            (arrayOfJournalEntries) => {
-                journalEntryData = arrayOfJournalEntries
-            }
-        )
 }
+
