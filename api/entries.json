@@ -1,0 +1,47 @@
+{
+    "entries":
+
+    [
+        {
+            "id": 1,
+            "dateOfEntry": "06/01/20",
+            "conceptsCovered": "design, flexbox, components, objects, properties",
+            "journalEntry": "Martin's Aquarium Day 1",
+            "moodForTheDay": "Pretty Good"
+        },
+        {
+            "id": 2,
+            "dateOfEntry": "06/02/20",
+            "conceptsCovered": "functions, string templates, iteration",
+            "journalEntry": "Martin's Aquarium Day 2",
+            "moodForTheDay": "Fantastic!"
+        },
+        {
+            "id": 3,
+            "dateOfEntry": "06/03/20",
+            "conceptsCovered": "functions, filtering, modulo, debugger",
+            "journalEntry": "Martin's Aquarium Day 3",
+            "moodForTheDay": "Hnaging In There"
+        },
+        {
+            "id": 4,
+            "dateOfEntry": "06/04/20",
+            "conceptsCovered": "JSON, json-server, fetch, functions",
+            "journalEntry": "Martin's Aquarium Day 4",
+            "moodForTheDay": "Got Some Work To Do"
+        },
+        {
+            "id": 5,
+            "dateOfEntry": "06/05/20",
+            "conceptsCovered": "browser events, functions, filtering, DOM",
+            "journalEntry": "Martin's Aquarium Day 5",
+            "moodForTheDay": "Really Good"
+        }
+    ]
+}
+
+
+
+
+
+
