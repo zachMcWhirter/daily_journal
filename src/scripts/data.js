@@ -1,7 +1,7 @@
-// ******************************
-// Daily Journal - Part 4 Instructions:
+// *************************
+// Daily Journal Part 5
 
-// *STEP 2* the fetch call
+// this code was copied from journalData.js 
 
 let journalEntryData = []
 
