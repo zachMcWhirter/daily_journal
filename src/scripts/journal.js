@@ -1,7 +1,6 @@
 import journalAPI from "./data.js"
 import journalEntryComponent from "./entryComponent.js"
 
-
 // To call everything here you need to:
 
 //     1. Use the const from journalData.js (journalAPI) with dot notation connected to the function under it (getJournalEntries()). 
@@ -15,6 +14,7 @@ journalEntryComponent.journalEntryList()
 // **Listen for Submit Button Click**
 
 // In your main JavaScript module (journal.js) add a click event listener to the Record Journal Entry button at the bottom of your form. 
+//When the user clicks the button, you need to create a new entry in your API.
 
 const submitJournalEntryButton = document.querySelector(".submitEntryButton")
 
@@ -25,7 +25,7 @@ submitJournalEntryButton.addEventListener("click", e => {
     }
  
 })
-//When the user clicks the button, you need to create a new entry in your API.
+
 
 
 
