@@ -1,5 +1,8 @@
 import journalAPI from "./data.js"
 import journalEntryComponent from "./entryComponent.js"
+import makeJournalEntry from "./createEntry.js"
+import renderToDom from "./entryList.js"
+
 
 // To call everything here you need to:
 
@@ -17,16 +20,22 @@ journalEntryComponent.journalEntryList()
 //When the user clicks the button, you need to create a new entry in your API.
 
 const submitJournalEntryButton = document.querySelector(".submitEntryButton")
-
+ 
 submitJournalEntryButton.addEventListener("click", e => {
     console.log(e, "event")
-    document.getElementById("button")
-    if(document.getElementById("journalDate").value === "" || document.getElementById("conceptsCovered").value === "" || document.getElementById("journalEntry").value === "" || document.getElementById("mood").value === "") { alert("Please complete all data forms before submitting entry")
+
+    const journalDate = document.getElementById("journalDate").value
+    const conceptsCovered = document.getElementById("conceptsCovered").value
+    const journalEntry = document.getElementById("journalEntry").value
+    const mood = document.getElementById("mood").value
+
+    if(journalDate === "" || journalEntry === "" || mood === "" || conceptsCovered === "" ) { alert("Please complete all data forms before submitting entry")
+    }else{
+        const newEntry1 = makeJournalEntry(journalDate, conceptsCovered, journalEntry, mood);
+        journalAPI.saveJournalEntry(newEntry1).then(() => {
+            return journalAPI.getJournalEntries()
+        }).then((journalObj) => {
+            return renderToDom.journalEntryConverter(journalObj)
+        })
     }
- 
 })
-
-
-
-
-    // journalArticleElement.innerHTML += journalHTMLRepresentation
