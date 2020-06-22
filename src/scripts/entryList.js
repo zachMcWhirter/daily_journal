@@ -2,7 +2,6 @@
 // Daily Journal Part 5
 
 // this code was copied from journal.js
-
 const renderToDom = {
 journalEntryConverter(journalEntryObject) {
     const journalEntryHTMLRepresentation = `<section class="journalEntryCard">

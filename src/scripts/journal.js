@@ -22,7 +22,7 @@ journalEntryComponent.journalEntryList()
 const submitJournalEntryButton = document.querySelector(".submitEntryButton")
  
 submitJournalEntryButton.addEventListener("click", e => {
-    console.log(e, "event")
+    // console.log(e, "event")
 
     const journalDate = document.getElementById("journalDate").value
     const conceptsCovered = document.getElementById("conceptsCovered").value
