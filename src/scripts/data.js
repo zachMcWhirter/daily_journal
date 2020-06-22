@@ -24,7 +24,8 @@ const journalAPI = {
             },
             body: JSON.stringify(newEntryObject)
         })
-    }
+    },
+    
 }
 
 export default journalAPI;
