@@ -41,6 +41,27 @@
       "journalEntry": "I began to understand Factory functions. Got lots of practice reps. Good stuff.",
       "moodForTheDay": "reallyGood",
       "id": 7
+    },
+    {
+      "dateOfEntry": "2020-06-19",
+      "conceptsCovered": "More array methods (delete)",
+      "journalEntry": "Brenda did a demo walking us thru the process of creating a delete button with full functionality              ",
+      "moodForTheDay": "Pretty Good",
+      "id": 8
+    },
+    {
+      "dateOfEntry": "2020-06-20",
+      "conceptsCovered": "Practice",
+      "journalEntry": "Got in some practice and had a nice zoom chat with Eric, Faith, and Tasha.                ",
+      "moodForTheDay": "Fantastic",
+      "id": 9
+    },
+    {
+      "dateOfEntry": "2020-06-23",
+      "conceptsCovered": "Editing data in form fields",
+      "journalEntry": "This morning was rough. Liam had his surgery, and it was hard to focus. But the afternoon was better. Got some of the edit chapter finished.",
+      "moodForTheDay": "Hanging In",
+      "id": 10
     }
   ]
 }
