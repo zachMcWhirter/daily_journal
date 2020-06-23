@@ -41,12 +41,17 @@ submitJournalEntryButton.addEventListener("click", e => {
 })
 
 
-// const updateFormFields = journalEntryId => {
+//     const updateFormFields = journalEntryId => {
 
-//     // Get reference to input fields in the form
-//     const hiddenJournalEntryId = document.querySelector("#recipeId")
-//     const recipeTitleInput = document.querySelector("#recipeTitle")
-//     const recipeInstructionsInput = document.querySelector("#recipeInstructions")
+// //     // Get reference to input fields in the form
+
+//     const editJournalDate = document.getElementById("journalDate").value
+//     const conceptsCovered = document.getElementById("conceptsCovered").value
+//     const journalEntry = document.getElementById("journalEntry").value
+//     const mood = document.getElementById("mood").value
+//     ("#recipeInstructions")
+
+//     }
 
 //     fetch(`http://localhost:8088/recipes/${recipeId}`)
 //         .then(response => response.json())
@@ -61,5 +66,3 @@ submitJournalEntryButton.addEventListener("click", e => {
 //             recipeInstructionsInput.value = recipe.instructions
 //         })
 // }
-
-

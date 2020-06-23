@@ -30,8 +30,8 @@ const journalAPI = {
         }).then(response => response.json());
    }
 
-    // editJournalEntry: (id) => {
-    //     return fetch()
+    // updateJournalEntry: (id) => {
+    //     return fetch(`${}`)
 
     // }
 }  

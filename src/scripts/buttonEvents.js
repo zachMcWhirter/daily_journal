@@ -20,7 +20,7 @@ const addDeleteEvents = () => {
     entryLogContainer.addEventListener("click", event => {
         if (event.target.id.startsWith("editButton--")) {
             const journalEntryToEdit = event.target.id.split("--")[1];
-            journalAPI.editJournalEntry(journalEntryToEdit)
+            journalAPI.updateJournalEntry(journalEntryToEdit)
                 .then(() => {
                     journalEntryComponent.renderJournalEntryList()
                 })

@@ -68,7 +68,7 @@ h1 {
     width: 100%;
 }
 
-#saveButton {
+#submitButton {
     background-color: red;
     width: 100px;
     height: 30px;
@@ -80,7 +80,7 @@ h1 {
     margin: 10px 0px 0px 0px;
 }
 
-#saveButton:hover {
+#submitButton:hover {
     color: silver;
     box-shadow: 0 0 3px 3px silver;
 }
