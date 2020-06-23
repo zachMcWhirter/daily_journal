@@ -2,7 +2,7 @@ import journalAPI from "./data.js"
 import journalEntryComponent from "./entryComponent.js"
 import makeJournalEntry from "./createEntry.js"
 import renderToDom from "./entryList.js"
-
+import addDeleteEvents from "./buttonEvents.js"
 
 // To call everything here you need to:
 
@@ -12,8 +12,8 @@ import renderToDom from "./entryList.js"
 
 //     3. Then plug in the const from entryComponent.js (journalEntryComponent) dot notation and the function under it (journalEntryList())
 
-journalEntryComponent.journalEntryList()
-
+journalEntryComponent.journalEntryList();
+addDeleteEvents();
 // **Listen for Submit Button Click**
 
 // In your main JavaScript module (journal.js) add a click event listener to the Record Journal Entry button at the bottom of your form. 
@@ -40,7 +40,6 @@ submitJournalEntryButton.addEventListener("click", e => {
     }
 })
 
-journalEntryComponent.addDeleteEvents()
 
 
 // *******************************

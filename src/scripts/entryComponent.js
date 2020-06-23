@@ -18,22 +18,21 @@ const journalEntryComponent = {
             }
         
         })
-    },
-
-
-addDeleteEvents() {
-    // const entryLogContainer = document.querySelector(".entryLog")
-    let buttons = document.querySelectorAll("#deleteButton")
-    buttons.forEach(button => {
-        button.addEventListener("click", e => {
-            console.log("test")
-            e.preventDefault();
-            if (event.target.id.startsWith("#deleteButton--")) {
-                const journalEntryToDelete = event.target.id.split("--")[1];
-                journalAPI.deleteJournalEntry(journalEntryToDelete);
-        }
-    })
-})
+    }
 }
-}
+
+// addDeleteEvents() {
+//     // const entryLogContainer = document.querySelector(".entryLog")
+//     let buttons = document.querySelectorAll("#deleteButton")
+//     buttons.forEach(button => {
+//         button.addEventListener("click", e => {
+//             // e.preventDefault();
+//             if (event.target.id.startsWith("#deleteButton--")) {
+//                 const journalEntryToDelete = event.target.id.split("--")[1];
+//                 journalAPI.deleteJournalEntry(journalEntryToDelete);
+//         }
+//     })
+// })
+// }
+// }
 export default journalEntryComponent;

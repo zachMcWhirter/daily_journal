@@ -4,7 +4,7 @@
 // Daily Journal Part 5
 
 // Consider this file an independent, helper module now. It should not directly execute any logic for the application.
-const url = "http://localhost:3000/entries";
+const url = "http://localhost:3000";
 
 
 const journalAPI = {
@@ -17,7 +17,7 @@ const journalAPI = {
         },
 //   **Daily Journal Part 7**
     saveJournalEntry: (newEntryObject) => {
-        return fetch(`${url}`, {
+        return fetch(`${url}/entries`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -30,7 +30,7 @@ const journalAPI = {
         return fetch(`${url}/entries/${id}`, {
             method: "DELETE"
         }).then(response => response.json());
-    }
-}
+   }
+}  
 
 export default journalAPI;
