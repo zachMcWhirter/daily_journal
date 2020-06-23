@@ -9,11 +9,14 @@ import renderToDom from "./entryList.js"
 
 
 const journalEntryComponent = {
-    journalEntryList() {
+    renderJournalEntryList() {
         journalAPI.getJournalEntries().then(response => {
-        for(let journalEntry of response) {   
-                const journalHTML = renderToDom.journalEntryConverter(journalEntry)
-                const journalEntryArticleElement = document.querySelector(".entryLog")
+            const journalEntryArticleElement = document.querySelector(".entryLog")   
+            journalEntryArticleElement.innerHTML = ""
+            for(let journalEntry of response) {   
+                    const journalHTML = renderToDom.journalEntryConverter(journalEntry)
+                
+        
                 journalEntryArticleElement.innerHTML += journalHTML
             }
         

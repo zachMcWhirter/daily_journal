@@ -10,10 +10,8 @@ const url = "http://localhost:3000";
 const journalAPI = {
     getJournalEntries () {
         return fetch("http://localhost:3000/entries")
-            .then(response => response.json()).then(
-                (response) => {
-                    return response
-                })
+            .then(response => response.json())
+            
         },
 //   **Daily Journal Part 7**
     saveJournalEntry: (newEntryObject) => {
@@ -31,6 +29,11 @@ const journalAPI = {
             method: "DELETE"
         }).then(response => response.json());
    }
+
+    editJournalEntry: (id) => {
+        return fetch()
+
+    }
 }  
 
 export default journalAPI;
