@@ -4,12 +4,12 @@
 
 // // Access radio button HTML elements in DOM
 
-// const radioButtonEvent = () => {
-//     let radioButtonElement = document.getElementsByName("moodSelect");
+const radioButtonEvent = () => {
+    let radioButtonElement = document.getElementsByName("moodSelect");
 
-// radioButtonElement.addEventListener("click", e => {
-//     const mood = e.document.getElementsByName("moodSelect").value
+radioButtonElement.addEventListener("click", e => {
+    const mood = e.document.getElementsByName("moodSelect").value
 
-//     // radioButtonElement.forEach()
-//     console.log("mood", mood)
-// })
+    // radioButtonElement.forEach()
+    console.log("mood", mood)
+})
