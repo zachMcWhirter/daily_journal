@@ -29,7 +29,4 @@ const addDeleteEvents = () => {
 
 }
 
-
-
-
 export default addDeleteEvents;

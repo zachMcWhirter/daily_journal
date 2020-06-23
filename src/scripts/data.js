@@ -30,10 +30,10 @@ const journalAPI = {
         }).then(response => response.json());
    }
 
-    editJournalEntry: (id) => {
-        return fetch()
+    // editJournalEntry: (id) => {
+    //     return fetch()
 
-    }
+    // }
 }  
 
 export default journalAPI;
