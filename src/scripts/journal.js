@@ -20,7 +20,7 @@ addDeleteEvents();
 //When the user clicks the button, you need to create a new entry in your API.
 
 const submitJournalEntryButton = document.querySelector(".submitEntryButton")
- 
+
 submitJournalEntryButton.addEventListener("click", e => {
     // console.log(e, "event")
 
@@ -29,8 +29,9 @@ submitJournalEntryButton.addEventListener("click", e => {
     const journalEntry = document.getElementById("journalEntry").value
     const mood = document.getElementById("mood").value
 
-    if(journalDate === "" || journalEntry === "" || mood === "" || conceptsCovered === "" ) { alert("Please complete all data forms before submitting entry")
-    }else{
+    if (journalDate === "" || journalEntry === "" || mood === "" || conceptsCovered === "") {
+        alert("Please complete all data forms before submitting entry")
+    } else {
         const newEntry1 = makeJournalEntry(journalDate, conceptsCovered, journalEntry, mood);
         journalAPI.saveJournalEntry(newEntry1).then(() => {
             return journalAPI.getJournalEntries()
@@ -41,28 +42,4 @@ submitJournalEntryButton.addEventListener("click", e => {
 })
 
 
-//     const updateFormFields = journalEntryId => {
 
-// //     // Get reference to input fields in the form
-
-//     const editJournalDate = document.getElementById("journalDate").value
-//     const conceptsCovered = document.getElementById("conceptsCovered").value
-//     const journalEntry = document.getElementById("journalEntry").value
-//     const mood = document.getElementById("mood").value
-//     ("#recipeInstructions")
-
-//     }
-
-//     fetch(`http://localhost:8088/recipes/${recipeId}`)
-//         .then(response => response.json())
-//         .then(recipe => {
-//             /*
-//                 Now that you KNOW you have the data, render
-//                 an editing form that represents the current
-//                 state of the resource.
-//             */
-//             hiddenRecipeId.value = recipe.id // Hidden value. User no see. 🙈
-//             recipeTitleInput.value = recipe.title
-//             recipeInstructionsInput.value = recipe.instructions
-//         })
-// }

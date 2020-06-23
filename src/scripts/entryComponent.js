@@ -16,7 +16,6 @@ const journalEntryComponent = {
             for(let journalEntry of response) {   
                     const journalHTML = renderToDom.journalEntryConverter(journalEntry)
                 
-        
                 journalEntryArticleElement.innerHTML += journalHTML
             }
         

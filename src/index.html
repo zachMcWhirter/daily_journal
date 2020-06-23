@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daily Journal</title>
     <link rel="stylesheet" href="styles/journal.css">
 </head>
+
 <body>
-    <div class="banner"><h1>Daily Journal</h1></div>
-    
+    <div class="banner">
+        <h1>Daily Journal</h1>
+    </div>
+
     <div class="under__banner">
         <div class="under__bannerLeft">
             <header class="title">=)</header>
@@ -16,25 +20,26 @@
             <section id="journalForm">
                 <form class="form__box" action="">
                     <!-- hidden input field -->
-                    <input type="hidden" id="journalID" value=""/>
+                    <input type="hidden" id="journalID" value="" />
                     <fieldset class="fieldset">
                         <label for="journalDate">Date of entry</label>
                         <input type="date" name="journalDate" class="input__field" id="journalDate">
                         <label for="conceptsCovered">Concepts covered</label>
-                        <input type="text" name="conceptsCovered" class="input__field" id="conceptsCovered" maxlength="50">
+                        <input type="text" name="conceptsCovered" class="input__field" id="conceptsCovered"
+                            maxlength="50">
                         <label for="journalEntry">Journal Entry</label>
                         <textarea rows="3" cols="30" name="journalEntry" class="input__field" id="journalEntry">
-                        </textarea> 
+                        </textarea>
                         <label for="mood">Mood for the day</label>
                         <select name="mood" class="input__field" id="mood">
                             <option value="Fantastic">Fantastic</option>
                             <option value="Really Good">Really Good</option>
                             <option value="ok">OK</option>
                             <option value="Hanging In">Hanging In </option>
-                            <option value="nope">Nope</option>       
-                        <input type="submit" class="submitEntryButton" id="submitButton" value="Submit Entry"/>
+                            <option value="nope">Nope</option>
+                            <input type="submit" class="submitEntryButton" id="submitButton" value="Submit Entry" />
                     </fieldset> <br>
-                    
+
                     <!-- <fieldset value="">
                         <legend>Filter Journal Entries by Mood</legend>
                             <input type="radio" id="fantastic" value="fantastic" name="moodSelect">
@@ -48,15 +53,16 @@
                             <input type="radio" id="nope" value="dont_talk_to_me" name="moodSelect">
                             <label for="nope">Nope</label>
                     </fieldset> -->
-                </form> 
+                </form>
             </section>
         </div>
         <div class="under__bannerRight">
             <article class="entryLog"></article>
         </div>
-            
+
     </div>
-   
+
     <script type="module" src="scripts/journal.js"></script>
 </body>
+
 </html>

@@ -5,7 +5,7 @@
 
 const profanity = ["damn", "shit", "piss", "fuck", "cunt", "cocksucker", "motherfucker", "fucker", "bitch", "asshole", "asshole", "ass", "dickhead", "pussy", "bastard"]
 // // create an array with all the insults
-const insults = ["Your mom!", "Get bent.", "Suck me sideways.", "You're a dipshit", "You're a lyin' dog-faced pony soldier.", "Eat a bag of dicks.", "Surprise, you're adopted. Nobody loves you!", "Take your head out of your ass. Its not a hat.", "You probably wipe back to front.", "You're as useful as a poopy-flavored lollypop." ]
+const insults = ["Your mom!", "Get bent.", "Suck me sideways.", "You're a dipshit", "You're a lyin' dog-faced pony soldier.", "Eat a bag of dicks.", "Surprise, you're adopted. Nobody loves you!", "Take your head out of your ass. Its not a hat.", "You probably wipe back to front.", "Ass Clown." ]
 
 // // create a function that returns True if there is a cussword in the string
 //  # FOR each cussWord
