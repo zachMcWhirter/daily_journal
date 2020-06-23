@@ -25,7 +25,12 @@ const journalAPI = {
             body: JSON.stringify(newEntryObject)
         })
     },
-    
+    // Fetch call for the delete journal entry feature
+    deleteJournalEntry: (id) => {
+        return fetch(`${url}/entries/${id}`, {
+            method: "DELETE"
+        }).then(response => response.json());
+    }
 }
 
 export default journalAPI;
