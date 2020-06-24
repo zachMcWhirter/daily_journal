@@ -14,7 +14,7 @@ const journalAPI = {
 
     },
     //   **Daily Journal Part 7**
-    saveJournalEntry: (newEntryObject) => {
+    submitJournalEntry: (newEntryObject) => {
         return fetch(`${url}/entries`, {
             method: "POST",
             headers: {

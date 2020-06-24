@@ -23,25 +23,9 @@ const addDeleteEvents = () => {
                 const journalEntryToEdit = event.target.id.split("--")[1];
                 console.log("test")
                 editFormFields(journalEntryToEdit)
-
-
             }
+        })
+}
 
-        },
 
-            saveButton.addEventListener("click", event => {
-                const hiddenRecipeId = document.querySelector("#journalId")
-
-                if (hiddenJournalId.value !== "") {
-                    editJournal(journalId)
-                } else {
-                    // Save functionality goes here
-                    
-                    journalAPI.updateJournalEntry(journalEntryToEdit)
-                        .then(() => {
-                            journalEntryComponent.renderJournalEntryList()
-                            
-                        })
-                }
-            
-                export default addDeleteEvents
+export default addDeleteEvents
