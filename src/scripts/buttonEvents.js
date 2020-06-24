@@ -17,20 +17,31 @@ const addDeleteEvents = () => {
                 })
         }
     }),
-    // Adding event listener to button (#editButton). Give unique id which includes id property of entry
-    entryLogContainer.addEventListener("click", event => {
-        if (event.target.id.startsWith("editButton--")) {
-            const journalEntryToEdit = event.target.id.split("--")[1];
-            console.log("test")
-            editFormFields(journalEntryToEdit)
+        // Adding event listener to button (#editButton). Give unique id which includes id property of entry
+        entryLogContainer.addEventListener("click", event => {
+            if (event.target.id.startsWith("editButton--")) {
+                const journalEntryToEdit = event.target.id.split("--")[1];
+                console.log("test")
+                editFormFields(journalEntryToEdit)
 
-            // journalAPI.updateJournalEntry(journalEntryToEdit)
-            //     .then(() => {
-            //         journalEntryComponent.renderJournalEntryList()
-            //     })
-        }
-    })
 
-}
+            }
 
-export default addDeleteEvents;
+        },
+
+            saveButton.addEventListener("click", event => {
+                const hiddenRecipeId = document.querySelector("#journalId")
+
+                if (hiddenJournalId.value !== "") {
+                    editJournal(journalId)
+                } else {
+                    // Save functionality goes here
+                    
+                    journalAPI.updateJournalEntry(journalEntryToEdit)
+                        .then(() => {
+                            journalEntryComponent.renderJournalEntryList()
+                            
+                        })
+                }
+            
+                export default addDeleteEvents

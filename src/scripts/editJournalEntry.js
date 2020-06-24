@@ -1,7 +1,6 @@
 
 const url = "http://localhost:3000";
 
-
 const editFormFields = journalEntryId => {
 
     //     // Get reference to input fields in the form
@@ -14,12 +13,12 @@ const editFormFields = journalEntryId => {
     fetch(`${url}/entries/${journalEntryId}`)
         .then(response => response.json())
         .then(entry => {
-        hiddenJournalID.value = entry.id
-        editConceptsCovered.value = entry.conceptsCovered
-        editJournalDate.value = entry.dateOfEntry
-        editJournalEntry.value = entry.journalEntry
-        editMood.value = entry.moodForTheDay
-        console.log("test")
+            hiddenJournalID.value = entry.id
+            editConceptsCovered.value = entry.conceptsCovered
+            editJournalDate.value = entry.dateOfEntry
+            editJournalEntry.value = entry.journalEntry
+            editMood.value = entry.moodForTheDay
+            console.log("test")
         })
 }
 
