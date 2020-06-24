@@ -62,6 +62,13 @@
       "journalEntry": "This morning was rough. Liam had his surgery, and it was hard to focus. But the afternoon was better. Got some of the edit chapter finished.",
       "moodForTheDay": "Hanging In",
       "id": 10
+    },
+    {
+      "dateOfEntry": "2020-06-23",
+      "conceptsCovered": "Editing data in form fields",
+      "journalEntry": "This morning was rough. Liam had his surgery, and it was hard to focus. But the afternoon was better. Got some of the edit chapter finished.",
+      "moodForTheDay": "nope",
+      "id": 11
     }
   ]
 }

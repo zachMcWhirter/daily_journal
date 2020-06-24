@@ -42,6 +42,3 @@ submitJournalEntryButton.addEventListener("click", e => {
         })
     }
 })
-
-
-

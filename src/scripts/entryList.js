@@ -12,8 +12,7 @@ const renderToDom = {
             <div><font color="white"; font-weight:bold;>Journal Entry:</font> ${journalEntryObject.journalEntry}</div> <br>
             <div><font color="white"; font-weight:bold;>Mood:</font> ${journalEntryObject.moodForTheDay}</div> <br>
             <button id="editButton--${journalEntryObject.id}">Edit</button> 
-            <button id="deleteButton--${journalEntryObject.id}">Delete</button> <br><br>
-            <button id="saveEditButton--${journalEntryObject.id}">Save Edit</button>
+            <button id="deleteButton--${journalEntryObject.id}">Delete</button>
         </section>`
 
         return journalEntryHTMLRepresentation
