@@ -28,12 +28,17 @@ const journalAPI = {
         return fetch(`${url}/entries/${id}`, {
             method: "DELETE"
         }).then(response => response.json());
-   }
+   },
+    updateJournalEntry: (id, updatedJournalObject) => {
+    return fetch(`${url}/entries/${id}`, {
+        method: "PUT",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(updatedJournalObject)
+    })
+}
+}
 
-    // updateJournalEntry: (id) => {
-    //     return fetch(`${}`)
-
-    // }
-}  
 
 export default journalAPI;
