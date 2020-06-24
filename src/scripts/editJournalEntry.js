@@ -1,3 +1,5 @@
+import journalEntryComponent from "./entryComponent.js"
+
 
 const url = "http://localhost:3000";
 
@@ -22,33 +24,34 @@ const editFormFields = journalEntryId => {
         })
 }
 
-// const clearInputs = () => {
-// 	document.querySelector("#journalId").value = "";
-// 	document.querySelector("#journalDate").value = "";
-// 	document.querySelector("#conceptsCovered").value = "";
-// 	document.querySelector("#journalEntry").value = "";
-// 	document.querySelector("#mood").value = "";
-// }
+const clearInputs = () => {
+    document.querySelector("#journalDate").value = "";
+    document.querySelector("#conceptsCovered").value = "";
+    document.querySelector("#journalEntry").value = "";
+    document.querySelector("#mood").value = "";
+}
+const saveEditFunction = () => {
+    const saveEditButton = document.querySelector("#saveEditButton")
+    saveEditButton.addEventListener("click", event => {
+        const hiddenJournalId = document.querySelector("#journalId");
 
-// saveEditButton.addEventListener("click", event => {
-//     const hiddenJournalId = document.querySelector("#journalId");
+        if (hiddenJournalId.value !== "") {
+            const journalDateInput = document.querySelector("#journalDtae").value;
+            const conceptsCoveredInput = document.querySelector("#conceptsCovered").value;
+            const journalEntryInput = document.querySelector("#journalEntry").value;
+            const moodInput = document.querySelector("#mood").value;
 
-//     if (hiddenJournalId.value !== "") {
-// 		const journalDateInput = document.querySelector("#journalDtae").value;
-// 		const conceptsCoveredInput = document.querySelector("#conceptsCovered").value;
-// 		const journalEntryInput = document.querySelector("#journalEntry").value;
-// 		const moodInput = document.querySelector("#mood").value;
-		
-// 		API.updateJournalEntry(hiddenJournalId.value, submitJournalEntry(journalDateInput,conceptsCoveredInput, journalEntryInput, moodInput))
-// 		.then(() => {
-// 			clearInputs();
-// 			renderJournalEntryList();
-// 		});
-//     } else {
-// 		// Save functionality goes here
-// 		console.log("this is the save a new one functionality");
-//     }
-// });
+            API.updateJournalEntry(hiddenJournalId.value, submitJournalEntry(journalDateInput, conceptsCoveredInput, journalEntryInput, moodInput))
+                .then(() => {
+                    this.clearInputs();
+                    journalEntryComponent.renderJournalEntryList();
+                });
+        } else {
+            // Save functionality goes here
+            console.log("this is the save a new one functionality");
+        }
+    })
+}
 
 
 
