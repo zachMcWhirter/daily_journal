@@ -17,20 +17,15 @@ const addDeleteEvents = () => {
                 })
         }
     }),
-    // Adding event listener to button (#editButton). Give unique id which includes id property of entry
-    entryLogContainer.addEventListener("click", event => {
-        if (event.target.id.startsWith("editButton--")) {
-            const journalEntryToEdit = event.target.id.split("--")[1];
-            console.log("test")
-            editFormFields(journalEntryToEdit)
-
-            // journalAPI.updateJournalEntry(journalEntryToEdit)
-            //     .then(() => {
-            //         journalEntryComponent.renderJournalEntryList()
-            //     })
-        }
-    })
-
+        // Adding event listener to button (#editButton). Give unique id which includes id property of entry
+        entryLogContainer.addEventListener("click", event => {
+            if (event.target.id.startsWith("editButton--")) {
+                const journalEntryToEdit = event.target.id.split("--")[1];
+                console.log("test")
+                editFormFields(journalEntryToEdit)
+            }
+        })
 }
 
-export default addDeleteEvents;
+
+export default addDeleteEvents

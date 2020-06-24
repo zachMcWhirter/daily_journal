@@ -8,13 +8,13 @@ const url = "http://localhost:3000";
 
 
 const journalAPI = {
-    getJournalEntries () {
+    getJournalEntries() {
         return fetch("http://localhost:3000/entries")
             .then(response => response.json())
-            
-        },
-//   **Daily Journal Part 7**
-    saveJournalEntry: (newEntryObject) => {
+
+    },
+    //   **Daily Journal Part 7**
+    submitJournalEntry: (newEntryObject) => {
         return fetch(`${url}/entries`, {
             method: "POST",
             headers: {
@@ -28,17 +28,16 @@ const journalAPI = {
         return fetch(`${url}/entries/${id}`, {
             method: "DELETE"
         }).then(response => response.json());
-   },
+    },
     updateJournalEntry: (id, updatedJournalObject) => {
-    return fetch(`${url}/entries/${id}`, {
-        method: "PUT",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify(updatedJournalObject)
-    })
+        return fetch(`${url}/entries/${id}`, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(updatedJournalObject)
+        })
+    }
 }
-}
-
 
 export default journalAPI;

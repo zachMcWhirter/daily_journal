@@ -13,3 +13,19 @@ radioButtonElement.addEventListener("click", e => {
     // radioButtonElement.forEach()
     console.log("mood", mood)
 })
+
+
+// saveButton.addEventListener("click", event => {
+//     const hiddenRecipeId = document.querySelector("#journalId")
+
+//     if (hiddenJournalId.value !== "") {
+//         editJournal(journalId)
+//     } else {
+//         // Save functionality goes here
+        
+//         journalAPI.updateJournalEntry(journalEntryToEdit)
+//             .then(() => {
+//                 journalEntryComponent.renderJournalEntryList()
+                
+//             })
+//     }
