@@ -55,4 +55,4 @@ const saveEditFunction = () => {
 
 
 
-export default editFormFields
+export {editFormFields, clearInputs}

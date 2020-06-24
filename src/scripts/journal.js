@@ -3,7 +3,7 @@ import journalEntryComponent from "./entryComponent.js"
 import makeJournalEntry from "./createEntry.js"
 import renderToDom from "./entryList.js"
 import addDeleteEvents from "./buttonEvents.js"
-
+import {clearInputs} from "./editJournalEntry.js"
 // To call everything here you need to:
 
 //     1. Use the const from journalData.js (journalAPI) with dot notation connected to the function under it (getJournalEntries()). 
@@ -33,8 +33,10 @@ submitJournalEntryButton.addEventListener("click", e => {
         alert("Please complete all data forms before submitting entry")
     } else {
         const newEntry1 = makeJournalEntry(journalDate, conceptsCovered, journalEntry, mood);
-        journalAPI.saveJournalEntry(newEntry1).then(() => {
+        journalAPI.submitJournalEntry(newEntry1).then(() => {
+            clearInputs()
             return journalAPI.getJournalEntries()
+
         }).then((journalObj) => {
             return renderToDom.journalEntryConverter(journalObj)
         })

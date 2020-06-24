@@ -2,7 +2,7 @@
 import journalAPI from "./data.js"
 import renderToDom from "./entryList.js"
 import journalEntryComponent from "./entryComponent.js"
-import editFormFields from "./editJournalEntry.js"
+import {editFormFields} from "./editJournalEntry.js"
 
 const addDeleteEvents = () => {
     const entryLogContainer = document.querySelector(".entryLog")
