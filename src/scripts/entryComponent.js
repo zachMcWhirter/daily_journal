@@ -9,17 +9,17 @@ import renderToDom from "./entryList.js"
 
 
 const journalEntryComponent = {
-    renderJournalEntryList() {
-        journalAPI.getJournalEntries().then(response => {
+    renderJournalEntryList(entry) {
+       
             const journalEntryArticleElement = document.querySelector(".entryLog")   
             journalEntryArticleElement.innerHTML = ""
-            for(let journalEntry of response) {   
+            for(let journalEntry of entry) {   
                     const journalHTML = renderToDom.journalEntryConverter(journalEntry)
                 
                 journalEntryArticleElement.innerHTML += journalHTML
             }
         
-        })
+        
     }
 }
 
