@@ -7,7 +7,7 @@ const editFormFields = journalEntryId => {
 
     //     // Get reference to input fields in the form
     const hiddenJournalId = document.getElementById("journalId")
-    const editJournalDate = document.getElementById("journalDate")
+    const editJournalDate = document.querySelector("#journalDate")
     const editConceptsCovered = document.getElementById("conceptsCovered")
     const editJournalEntry = document.getElementById("journalEntry")
     const editMood = document.getElementById("mood")
@@ -30,29 +30,6 @@ const clearInputs = () => {
     document.querySelector("#journalEntry").value = "";
     document.querySelector("#mood").value = "";
 }
-const saveEditFunction = () => {
-    const saveEditButton = document.querySelector("#saveEditButton")
-    saveEditButton.addEventListener("click", event => {
-        const hiddenJournalId = document.querySelector("#journalId");
-
-        if (hiddenJournalId.value !== "") {
-            const journalDateInput = document.querySelector("#journalDtae").value;
-            const conceptsCoveredInput = document.querySelector("#conceptsCovered").value;
-            const journalEntryInput = document.querySelector("#journalEntry").value;
-            const moodInput = document.querySelector("#mood").value;
-
-            API.updateJournalEntry(hiddenJournalId.value, submitJournalEntry(journalDateInput, conceptsCoveredInput, journalEntryInput, moodInput))
-                .then(() => {
-                    this.clearInputs();
-                    journalEntryComponent.renderJournalEntryList();
-                });
-        } else {
-            // Save functionality goes here
-            console.log("this is the save a new one functionality");
-        }
-    })
-}
-
 
 
 export {editFormFields, clearInputs}

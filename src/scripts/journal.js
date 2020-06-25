@@ -4,44 +4,52 @@ import makeJournalEntry from "./createEntry.js"
 import renderToDom from "./entryList.js"
 import addDeleteEvents from "./buttonEvents.js"
 import {clearInputs} from "./editJournalEntry.js"
-// To call everything here you need to:
 
-//     1. Use the const from journalData.js (journalAPI) with dot notation connected to the function under it (getJournalEntries()). 
+journalAPI.getJournalEntries().then((response) => {
+    journalEntryComponent.renderJournalEntryList(response)
+});
 
-//     2. Next use .then(() => 
-
-//     3. Then plug in the const from entryComponent.js (journalEntryComponent) dot notation and the function under it (journalEntryList())
-
-journalEntryComponent.renderJournalEntryList();
 addDeleteEvents();
-// **Listen for Submit Button Click**
 
-// In your main JavaScript module (journal.js) add a click event listener to the Record Journal Entry button at the bottom of your form. 
-//When the user clicks the button, you need to create a new entry in your API.
-
+// Event listener for submitEntryButton
 const submitJournalEntryButton = document.querySelector(".submitEntryButton")
 
 submitJournalEntryButton.addEventListener("click", e => {
-    // console.log(e, "event")
+    console.log("clicked submit entry button", )
 
     const journalDate = document.getElementById("journalDate").value
     const conceptsCovered = document.getElementById("conceptsCovered").value
     const journalEntry = document.getElementById("journalEntry").value
     const mood = document.getElementById("mood").value
 
-    if (journalDate === "" || journalEntry === "" || mood === "" || conceptsCovered === "") {
-        alert("Please complete all data forms before submitting entry")
-    } else {
-        const newEntry1 = makeJournalEntry(journalDate, conceptsCovered, journalEntry, mood);
-        journalAPI.submitJournalEntry(newEntry1).then(() => {
-            clearInputs()
-            return journalAPI.getJournalEntries()
+    const hiddenJournalId = document.getElementById("journalId")
+    const editJournalDate = document.getElementById("journalDate")
+    const editConceptsCovered = document.getElementById("conceptsCovered")
+    const editJournalEntry = document.getElementById("journalEntry")
+    const editMood = document.getElementById("mood")
 
-        }).then((journalObj) => {
-            return renderToDom.journalEntryConverter(journalObj)
-        })
-    }
-})
+        if (hiddenJournalId.value !== "") {
+            
+            journalAPI.updateJournalEntry(hiddenJournalId.value,makeJournalEntry(editJournalDate.value, editConceptsCovered.value, editJournalEntry.value, editMood.value))
+                .then(() => {
 
-
-
+                    return journalAPI.getJournalEntries()
+                }).then((response) => {
+                    clearInputs();
+                    journalEntryComponent.renderJournalEntryList(response);
+                })
+        }else{
+            if (journalDate === "" || journalEntry === "" || mood === "" || conceptsCovered === "") {
+                alert("Please complete all data forms before submitting entry")
+            } else {
+                const newEntry1 = makeJournalEntry(journalDate, conceptsCovered, journalEntry, mood);
+                journalAPI.submitJournalEntry(newEntry1).then(() => {
+                    clearInputs()
+                    return journalAPI.getJournalEntries()
+        
+                }).then((journalObj) => {
+                    journalEntryComponent.renderJournalEntryList(journalObj)
+                })
+            }
+        }
+    })
